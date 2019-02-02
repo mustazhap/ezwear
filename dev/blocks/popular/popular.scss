@@ -1,0 +1,74 @@
+.popular{
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
+
+    &_wrapper{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__top{
+        border-bottom: 1px solid #ededed;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        span{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+
+    &__item{
+        display: flex;
+
+        img{
+            width: 184px !important;
+            height: 184px;
+        }
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-top: 23px;
+        margin-bottom: 10px;
+    }
+
+    &__tocart{
+        text-decoration: none;
+        cursor: pointer;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        b{
+            margin-right: 8px;
+            color: #2f75ec;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        span{
+            color: #2f75ec;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    &__price{
+        font-size: 16px;
+        margin-top: 9px;
+        line-height: 1;
+        font-weight: 700;
+        line-height: 24px;
+    }
+}

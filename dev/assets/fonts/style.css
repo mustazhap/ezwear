@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ewh84a');
+  src:  url('fonts/icomoon.eot?ewh84a#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ewh84a') format('truetype'),
+    url('fonts/icomoon.woff?ewh84a') format('woff'),
+    url('fonts/icomoon.svg?ewh84a#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-full:before {
+  content: "\e907";
+}
+.icon-Right_Arrow:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-Arrow:before {
+  content: "\e903";
+  color: #d4d3d3;
+}
+.icon-Facebook:before {
+  content: "\e904";
+  color: #acacac;
+}
+.icon-Twitter:before {
+  content: "\e905";
+  color: #acacac;
+}
+.icon-instagram:before {
+  content: "\e906";
+  color: #acacac;
+}
+.icon-Plus:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-Pinterest:before {
+  content: "\e909";
+  color: #acacac;
+}
+.icon-G:before {
+  content: "\e90a";
+  color: #acacac;
+}
+.icon-search:before {
+  content: "\e900";
+}
+.icon-cart:before {
+  content: "\e901";
+}

@@ -1,0 +1,187 @@
+.slider{
+    &__wrapper{
+        width: 100%;
+    }
+
+    .owl-dots{
+        position: absolute;
+        bottom: 20%;
+        right: 29%;
+        z-index: 999;
+        .active{
+            span{
+                background: #a054c6 !important;
+            }
+            
+        }
+    }
+    .owl-stage-outer{
+        z-index: 1;
+    }
+    .owl-nav{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        margin-top: -200px;
+        justify-content: space-between;
+
+        span{
+            width: 37px !important;
+            height: 50px !important;
+            color: transparent !important;
+            &:hover{
+                color: transparent;
+            }
+        }
+    }
+
+    
+    .owl-prev{
+        z-index: 99999;
+        width: 98px;
+        padding-left: 25px !important;
+        display: flex !important;
+        height: 401px;
+        background-color: #f6f6f6;
+        cursor: pointer !important;
+        outline: none;
+        background: url("../img/Prev_Slide.png") no-repeat !important;
+        background-size: cover;
+        transition: 0.5s all;
+        opacity: 0.5;
+
+
+        &:hover{
+            transition: 0.5s all;
+            opacity: 1;
+        }
+
+        span{
+            background: url("../img/prev.png") no-repeat;
+            background-size: contain;
+            margin-left: 25px;
+        }
+    }
+
+    .owl-next{
+        width: 98px;
+        padding-right: 25px !important;
+        z-index: 99999;
+        display: flex !important;
+        height: 401px;
+        background-color: #f6f6f6;
+        cursor: pointer !important;
+        justify-content: flex-end;
+        opacity: 0.5;
+        outline: none;
+        background: url("../img/Next_Slide.png") no-repeat !important;
+        background-size: cover;
+        transition: 0.5s all;
+
+
+        &:hover{
+            transition: 0.5s all;
+            opacity: 1;
+        }
+
+        span{
+            background: url("../img/next.png") no-repeat;
+            background-size: contain;
+            margin-right: 25px;
+        }
+    }
+    .owl-dot{
+        outline: none;
+        span{
+            background: rgba(#a054c6, 0.2) !important;
+
+        }
+    }
+
+    .disabled{
+        opacity: 0.5;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+
+
+    &__item{
+        height: 660px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        .slider{
+            &-left{
+                margin: 0;
+                padding: 0;
+                font-size: 55px;
+                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-right: -95px;
+                z-index: 2;
+                height: max-content;
+                position: relative;
+
+
+                span{
+                    line-height: 1;
+                    margin-right: 40px;
+                }
+
+                b{
+                    font-size: 97px;
+                    line-height: 1;
+                }
+
+            }
+
+            &-right{
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1;
+                display: flex;
+                flex-direction: column;
+                margin-left: -50px;
+                span{
+                    margin-bottom: 25px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-img{
+
+            }
+
+            &-button{
+                color: white;
+                background: #a054c6;
+                border-radius: 50px;
+                font-size: 18px;
+                width: 169px;
+                height: 49px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                position: absolute;
+                bottom: -100px;
+                &:hover{
+                    text-decoration: none;
+                }
+
+                b{
+                    font-size: 18px;
+                    margin-right: 13px;
+                }
+            }
+        }
+    }
+}

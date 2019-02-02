@@ -1,0 +1,49 @@
+// Header
+.header{
+    height: 80px;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav{
+        font-size: 13px;
+        font-weight: 400;
+        a{
+            margin-right: 45px;
+            color: #d4d3d3;
+
+            &:hover{
+                color: $text;
+                text-decoration: none;
+            }
+        }
+
+        .active{
+            color: $text;
+        }
+    }
+
+    &__right{
+        display: flex;
+        font-size: 22px;
+        
+        a{
+            color: $text;
+            margin-right: 25px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            &:hover{
+                text-decoration: none;
+            }
+
+        }
+    }
+}
+
+// Header

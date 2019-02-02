@@ -1,0 +1,162 @@
+.board{
+    padding-top: 44px;
+    margin-bottom: 44px;
+    
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        padding-top: 44px;
+        padding-bottom: 53px;
+        justify-content: space-between;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 43px;
+        margin-bottom: 15px;
+    }
+
+    &__descr{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 23px;
+    }
+
+    &__rate{
+        display: flex;
+        align-items: center;
+        span{
+            color: #f2752e;
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 15px;
+        }
+    }
+
+    &__button{
+        width: 264px;
+        height: 52px;
+        border-radius: 100px;
+        display: flex;
+        background-color: #f2752e;
+        span{
+            display: flex;
+            border-right: 2px solid #ce5b19;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color:white;
+            font-weight: 400;
+            width: 50%;
+        }
+        a{
+            width: 50%;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__item{
+        max-width: 580px;
+        width: 100%;
+        height: 385px;
+        display: flex;
+
+
+        &_left{
+            background-color: #f6f6f6;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+            padding-left: 30px;
+        }
+
+        &_right{
+            background-image: radial-gradient(196858px 196858px at 29056.38% 20068.57%, #2f75ec 0%, #1e58bb 100%);
+            span{
+                color: white;
+                
+            }
+            .board{
+                &__title{
+                    font-size: 33px;
+                }
+
+                &__descr{
+                    width: 80%;
+                    margin-bottom: 17px;
+                }
+
+                &__button{
+                    background: white;
+                    color: $text;
+                    display: flex;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 10px;
+                    font-weight: 700;
+
+
+                    b{
+                        background: $text;
+                        font-size: 11px;
+                        width: 33px;
+                        height: 33px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        margin-left: 25px;
+                    }
+
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__price{
+        display: flex;
+        span{
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+        }
+
+        b{
+            font-weight: normal;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(white, 0.3);
+            line-height: 24px;
+            margin-left: 8px;
+        }
+    }
+    
+}
