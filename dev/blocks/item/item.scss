@@ -2,8 +2,113 @@
     &__wrapper{
         display: flex;
     }
-    
-    &__img{
 
+    &__img{
+        margin-right: 55px;
+        .ez-img{
+            width: 555px;
+            height: 555px;
+        }
+
+        .ez-thumb{
+            width: 96px;
+            height: 96px;
+        }
+
+        &-row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
+
+    &__body{
+        padding-top: 36px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 52px;
+        margin-bottom: 24px;
+    }
+
+    &__price{
+        margin-top: 30px;
+        display: flex;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 48px;
+    }
+
+    &__old{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-left: 18px;
+        opacity: 0.3;
+    }
+
+    &__text{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    &__row{
+        display: flex;
+    }
+
+    &__col{
+        
+        display: flex;
+        flex-direction: column;
+        width: 130px;
+        span{
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        &_first{
+            margin-right: 35px;
+        }
+    }
+
+    &__count{
+        display: flex;
+        width: 131px;
+        height: 51px;
+        border-radius: 6px;
+        border: 1px solid #f1f1f1;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+        .ez-minus, .ez-plus{
+            
+            a{
+                color: $text;
+                font-size: 13px;
+                font-weight: normal;
+
+                &:before{
+                    color: $text;
+                }
+            }
+        }
+        span{
+            font-size: 15px;
+            font-weight: 400;
+            color: $text;
+        }
+    }
+
+    
+
 }
