@@ -1,5 +1,7 @@
 // Header
 .ez-header{
+
+   
     height: 80px;
 
     &__wrapper{
@@ -7,6 +9,7 @@
         justify-content: space-between;
         align-items: center;
     }
+   
 
     &__nav{
         font-size: 13px;
@@ -26,6 +29,25 @@
         }
     }
 
+    &_black{
+        background-color: #2a292b;
+
+        .ez-header__nav{
+            .active{
+                color: white;
+            }
+            a{
+            &:hover{
+                color: rgba(white, 0.8)
+            }
+        }
+        }
+
+        .ez-header__right a{
+            color: #6c6b6b;
+        }
+    }
+
     &__right{
         display: flex;
         font-size: 22px;
@@ -42,6 +64,28 @@
                 text-decoration: none;
             }
 
+        }
+    }
+
+    .icon-cart{
+        position: relative;
+        &:after{
+            content: "7";
+            position: absolute;
+            top: -8px;
+            right: -5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background-color: #a054c6;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 8px;
         }
     }
 }
