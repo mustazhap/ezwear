@@ -1,6 +1,10 @@
 .ez-item{
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
+    margin-bottom: 110px;
+
     &__wrapper{
         display: flex;
+        padding-bottom: 30px;
     }
 
     &__img{
@@ -64,18 +68,22 @@
     }
 
     &__col{
-        
         display: flex;
         flex-direction: column;
-        width: 130px;
         span{
             font-size: 12px;
             text-transform: uppercase;
             font-weight: 700;
+            margin-bottom: 8px;
         }
 
         &_first{
             margin-right: 35px;
+            width: 130px;
+        }
+
+        &_th{
+            margin-bottom: 30px;
         }
     }
 
@@ -90,17 +98,26 @@
         padding-left: 20px;
         padding-right: 20px;
         justify-content: space-between;
+        input{
+            border: none;
+            font-size: 15px;
+            font-weight: 400;
+            width: 15px;
+        }
         .ez-minus, .ez-plus{
-            
-            a{
                 color: $text;
                 font-size: 13px;
+                width: 13px;
                 font-weight: normal;
+                cursor: pointer;
 
                 &:before{
                     color: $text;
                 }
-            }
+
+                &:hover{
+                    text-decoration: none;
+                }
         }
         span{
             font-size: 15px;
@@ -109,6 +126,74 @@
         }
     }
 
-    
+    &__input{
+        width: 340px;
+        height: 46px;
+        border-radius: 6px;
+        outline: none;
+        text-indent: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: 1px solid #2f75ec;
+        background-color: rgba(47, 117, 236, 0.04);
+    }
 
+    &__line{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        p{
+            opacity: 0.4;
+            color: #202124;
+            font-family: "Open Sans";
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            margin-left: 17px;
+        }
+    }
+
+    &__al{
+        margin-top: 27px;
+        opacity: 0.4;
+        color: #202124;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        .ez-button{
+            width: 240px;
+            margin-right: 35px;
+            height: 60px;
+            border-radius: 100px;
+            background-color: #2f75ec;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 700;
+            b{
+                margin-right: 10px;
+            }
+        }
+
+        a{
+            color: $text;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400;
+            b{
+                margin-right: 10px;
+            }
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
 }
