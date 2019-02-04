@@ -1,5 +1,6 @@
 .ez-popular{
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
+    padding-bottom: 20px;
 
     &_wrapper{
         display: flex;
@@ -8,10 +9,9 @@
     }
     .owl-nav{
         position: absolute;
-        top: 50%;
-        width: 100%;
+        top: -38%;
+        right: 0;
         display: flex;
-        margin-top: -200px;
         justify-content: space-between;
 
         span{
@@ -19,7 +19,6 @@
             font-family: 'icomoon' !important;
             display: flex;
             align-items: center;
-            justify-content: center;
 
             &:hover{
                 color: transparent;
@@ -38,7 +37,10 @@
         background: $text !important;
         width: 30px;
         height: 30px;
-        border-radius: 50%;
+        border-radius: 50% !important;
+        justify-content: center;
+        align-items: center;
+
 
 
         &:hover{
@@ -47,9 +49,8 @@
         }
 
         span{ 
-            margin-left: 25px;
             transform: rotate(180deg);
-            
+                padding-left: 6px;
             &:before{
                 content: "\e902";
                 color: white;
@@ -68,7 +69,7 @@
         background: $text !important;
         width: 30px;
         height: 30px;
-        border-radius: 50%;
+        border-radius: 50% !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -80,19 +81,20 @@
         }
 
         span{
+            padding-left: 6px;
             &:before{
                 content: "\e902";
-                color: red;
+                color: white;
             }
         }
     }
 
 
     .disabled{
-        opacity: 0.5;
+        opacity: 0.3 !important;
 
         &:hover{
-            opacity: 0.5;
+            opacity: 0.3 !important;
         }
     }
     &__top{
