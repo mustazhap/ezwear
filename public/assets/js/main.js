@@ -29,7 +29,7 @@
 $('.popular-owl').owlCarousel({
     loop:false,
     margin:33,
-    dots: true,
+    dots: false,
     responsiveClass:true,
     // mouseDrag: false,
     responsive:{
@@ -176,7 +176,7 @@ if($("#item-rank1").length){
         disableText:"Custom disable text!", 
         ratingText:"My custom rating text {rating}", 
         showToolTip:true, 
-        starSize: 12,
+        starSize: 16,
         rateCallback:function rateCallback(rating, done) {
             starRating2.setRating(rating); 
             starRating2.disable(); 
@@ -187,6 +187,15 @@ if($("#item-rank1").length){
 
 // popular items
 $(".ez-popular__item").hover(function(){
+    var a = $(this).find("img").attr("rel");
+    var b = $(this).find("img").attr("src");
+    $(this).find("img").attr("src", a);
+    $(this).mouseleave(function(){
+        $(this).find("img").attr("src", b);
+    })
+})
+
+$(".ez-new__item").hover(function(){
     var a = $(this).find("img").attr("rel");
     var b = $(this).find("img").attr("src");
     $(this).find("img").attr("src", a);
@@ -247,7 +256,55 @@ $('select').each(function(){
   
   });
   
-  // 
+  // hover on item
+
+  $(".ez-thumb").hover(function(){
+    var src = $(this).attr("src");
+    $(".ez-img").attr("src", src);
+  })
+
+    // counter
+    $(".ez-plus").click(function(){
+        var num = parseInt($.trim($(".ez-counter").val()));
+
+        if(num < 99){
+            $(".ez-counter").val(++num)
+        }
+    })
+    $(".ez-minus").click(function(){
+        var num = parseInt($.trim($(".ez-counter").val()));
+        if(num >0){
+            $(".ez-counter").val(--num)
+        }
+    })
+    
+    // search
+    $(".icon-search").click(function(event){
+        if($(this).hasClass("icon-search")){
+        $(".ez-header__search").css({"top":"80px", "visibility":"visible"});
+        $(this).removeClass();
+        $(this).addClass("icon-cancel");
+        }else{
+            $(this).removeClass();
+            $(this).addClass("icon-search");
+            $(".ez-header__search").css({"top":"0", "visibility":"hidden"});
+        }
+        event.stopPropagation();
+
+    })
+    $(".ez-header__search").click(function(event){
+        event.stopPropagation();
+    })
+    $("body").click(function(){
+        $(".ez-header__search").css({"visibility":"hidden", "top":"0"});
+        $(".icon-cancel").removeClass().addClass("icon-search");
+    })
+        
+    
+    
+
+
+
   // Menu
   $(".jobs__menu").click(function(){
     if($(this).hasClass("animated")){

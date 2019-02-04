@@ -6,7 +6,95 @@
         flex-direction: column;
 
     }
+    .owl-nav{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        margin-top: -200px;
+        justify-content: space-between;
 
+        span{
+            color: transparent !important;
+            font-family: 'icomoon' !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                color: transparent;
+            }
+        }
+    }
+
+    
+    .owl-prev{
+        z-index: 99999;
+        padding-left: 25px !important;
+        display: flex !important;
+        cursor: pointer !important;
+        outline: none;
+        transition: 0.5s all;
+        background: $text !important;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+
+        &:hover{
+            transition: 0.5s all;
+            opacity: 0.8;
+        }
+
+        span{ 
+            margin-left: 25px;
+            transform: rotate(180deg);
+            
+            &:before{
+                content: "\e902";
+                color: white;
+            }
+        }
+    }
+
+    .owl-next{
+        padding-right: 25px !important;
+        z-index: 99999;
+        display: flex !important;
+        cursor: pointer !important;
+        justify-content: flex-end;
+        outline: none;
+        transition: 0.5s all;
+        background: $text !important;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        &:hover{
+            transition: 0.5s all;
+            opacity: 0.8;
+        }
+
+        span{
+            &:before{
+                content: "\e902";
+                color: red;
+            }
+        }
+    }
+
+
+    .disabled{
+        opacity: 0.5;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
     &__top{
         border-bottom: 1px solid #ededed;
         height: 52px;
