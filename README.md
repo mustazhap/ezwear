@@ -1,4 +1,4 @@
-# front of site Fashion
+# front of EZWEAR.kz
 
 back: Akberdi Otkelbay  
 front: Mustazhap Rustem 
