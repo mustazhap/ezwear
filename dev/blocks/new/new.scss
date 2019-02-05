@@ -10,6 +10,10 @@
         transition: 0.5s all ease;
 
     }
+
+    &__r{
+        display: flex;
+    }
     &__big{
         max-width: 566px;
         height: 456px;
@@ -32,6 +36,7 @@
     &__text{
         display: flex;
         flex-direction: column;
+        z-index: 99;
     }
 
     &__br{

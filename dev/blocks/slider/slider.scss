@@ -50,6 +50,7 @@
         background-size: cover;
         transition: 0.5s all;
         opacity: 0.5;
+        margin: 0 !important;
 
 
         &:hover{
@@ -70,6 +71,7 @@
         z-index: 99999;
         display: flex !important;
         height: 401px;
+        margin: 0 !important;
         background-color: #f6f6f6;
         cursor: pointer !important;
         justify-content: flex-end;

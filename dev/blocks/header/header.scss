@@ -9,6 +9,7 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
+        z-index: 99999;
     }
    
 
@@ -47,7 +48,6 @@
         input{
             border: none;
             border-bottom: 1px solid rgba(255,255,255,.1);
-            background: transparent;
             outline: none;
             height: 50px;
             width: 100%;
@@ -59,7 +59,12 @@
 
     &_black{
         background-color: #2a292b;
+        .mob_menu{
+            a{
+            color: $text !important;
 
+            }
+        }
         .ez-header__nav{
             .active{
                 color: white;
@@ -81,10 +86,7 @@
     &__right{
         display: flex;
         font-size: 22px;
-        .icon-heart{
-            transition: 0.3s all;
-            display: none;
-        }
+       
         a{
             color: $text;
             margin-right: 25px;
@@ -124,6 +126,32 @@
             font-weight: 700;
             line-height: 8px;
         }
+    }
+    .icon-menu{
+        display: none;
+    }
+    .mob_menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 14px 30px rgba(0,0,0,.14);
+        top: 80px;
+        width: 320px;
+        justify-content: flex-end;
+        z-index: 999;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        visibility: hidden;
+
+        a{
+            font-size: 16px;
+        }
+
     }
 }
 

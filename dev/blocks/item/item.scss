@@ -2,6 +2,70 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
     margin-bottom: 110px;
 
+    .ez-error{
+        border: 1px solid #f63f45;
+        background-color: rgba(246, 63, 69, 0.04);
+        font-family: 'icomoon' !important;
+        position: relative;
+
+  &:active, &:focus{
+    border: 1px solid #f63f45;
+    position: relative;
+    background-color: rgba(246, 63, 69, 0.04);
+font-family: 'icomoon' !important;
+
+&:before{
+    content: "\e910";
+    font-size: 8px;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+    background-color: #f63f45;
+    position: absolute;
+            top: 0;
+            right: 0;
+}
+  }
+
+        &:before{
+            content: "\e910";
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 8px;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 100px;
+            background-color: #f63f45;
+        }
+    }
+
+    .ez-right{
+
+        &:before{
+            content: "\e910";
+            font-size: 8px;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: #2f75ec;
+        }
+
+        &:active, &:focus{
+            &:before{
+                content: "\e910";
+                font-size: 8px;
+                color: white;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background-color: #2f75ec;
+            }
+        }
+    }
     &__wrapper{
         display: flex;
         padding-bottom: 30px;
@@ -207,6 +271,12 @@
             &:hover{
                 text-decoration: none;
             }
+        }
+    }
+    &-cover{
+        .ez-img{
+            width: 540px;
+            height: 540px;
         }
     }
 }

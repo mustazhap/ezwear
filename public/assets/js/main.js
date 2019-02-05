@@ -11,11 +11,11 @@
     responsive:{
         0:{
             items:1,
-            nav:true
-        },
-        600:{
-            items:1,
             nav:false
+        },
+        700:{
+            items:1,
+            nav:true
         },
         1000:{
             items:1,
@@ -34,12 +34,12 @@ $('.popular-owl').owlCarousel({
     // mouseDrag: false,
     responsive:{
         0:{
-            items:3,
+            items:1,
             nav:true
         },
-        600:{
-            items:3,
-            nav:false
+        650:{
+            items:2,
+            nav:true
         },
         1000:{
             items:3,
@@ -283,23 +283,56 @@ $('select').each(function(){
         if($(this).hasClass("icon-search")){
         $(".ez-header__search").css({"top":"80px", "visibility":"visible"});
         $(this).removeClass();
-        $(this).addClass("icon-cancel");
+        $(this).addClass("icon-cancel1");
         }else{
             $(this).removeClass();
             $(this).addClass("icon-search");
             $(".ez-header__search").css({"top":"0", "visibility":"hidden"});
         }
         event.stopPropagation();
-
     })
     $(".ez-header__search").click(function(event){
         event.stopPropagation();
     })
     $("body").click(function(){
         $(".ez-header__search").css({"visibility":"hidden", "top":"0"});
-        $(".icon-cancel").removeClass().addClass("icon-search");
+        $(".icon-cancel1").removeClass().addClass("icon-search");
+    })
+
+     // search
+     $(".icon-menu").click(function(event){
+        if($(this).hasClass("icon-menu")){
+        $(".mob_menu").css({"visibility":"visible"});
+        $(this).removeClass();
+        $(this).addClass("icon-cancel2");
+        }else{
+            $(this).removeClass();
+            $(this).addClass("icon-menu");
+            $(".mob_menu").css({ "visibility":"hidden"});
+        }
+        event.stopPropagation();
+    })
+    $(".mob_menu").click(function(event){
+        event.stopPropagation();
+    })
+    $("body").click(function(){
+        $(".mob_menu").css({"visibility":"hidden"});
+        $(".icon-cancel2").removeClass().addClass("icon-menu");
     })
         
+    $(".input_numb").on("change paste keyup", function() {
+        if($(this).val() > 99){
+            $(this).addClass("ez-error")
+        }else{
+            $(this).removeClass("ez-error")
+
+        }
+     });
+
+     $('.input_numb').bind('keyup blur',function(){ 
+        var node = $(this);
+        node.val(node.val().replace(/[^0-9]/g,'') ); }
+    );
     
     
 
