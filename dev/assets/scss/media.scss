@@ -145,6 +145,12 @@
     }
     .ez-board__item{
       height: 300px;
+
+      &_right{
+        .ez-board__img {
+          width: 170px;
+      }
+      }
     }
     .ez-board__text{
       padding-top: 20px;
@@ -223,6 +229,7 @@
     }
     .ez-board__item_left .ez-board__img {
       margin-left: 0;
+      width: 186px;
   }
   .ez-board__item_left .ez-board__title {
     font-size: 22px;
@@ -410,6 +417,7 @@ margin-left: 8px;
     }
     .ez-board__item_left .ez-board__img {
       margin-left: -40px;
+      width: 178px;
   }
   .ez-board__item_left .ez-board__text {
     width: 230px;
