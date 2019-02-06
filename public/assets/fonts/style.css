@@ -33,7 +33,10 @@
 .icon-menu:before {
   content: "\e90e";
 }
-.icon-cancel:before {
+.icon-cancel1:before {
+  content: "\e90d";
+}
+.icon-cancel2:before {
   content: "\e90d";
 }
 .icon-heart:before {
