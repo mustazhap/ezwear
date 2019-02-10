@@ -109,10 +109,22 @@
         }
     }
 
+    &__video{
+      
+        video{
+
+            display: block;
+            min-width: 100%;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+    }
 
     &__item{
         height: 660px;
         display: flex;
+        position: relative;
         width: 100%;
         align-items: center;
         justify-content: center;

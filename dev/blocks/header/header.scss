@@ -116,24 +116,24 @@
 
     .icon-cart{
         position: relative;
-        &:after{
-            content: "7";
-            position: absolute;
-            top: -8px;
-            right: -5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #000;
-            width: 19px;
-            height: 19px;
-            border-radius: 50%;
-            background-color: #a054c6;
-            color: white;
-            font-size: 10px;
-            font-weight: 700;
-            line-height: 8px;
-        }
+    }
+    .cart-count{
+        position: absolute;
+        top: -8px;
+        display: block;
+        right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background-color: #a054c6;
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 8px;
     }
     .icon-menu{
         display: none;

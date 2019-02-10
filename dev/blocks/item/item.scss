@@ -148,8 +148,20 @@ font-family: 'icomoon' !important;
         }
 
         &_first{
-            margin-right: 35px;
+            margin-left: 35px;
             width: 130px;
+        }
+
+        &_help{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ez-help{
+            font-size: 18px;
+            cursor: pointer;
         }
 
         &_th{
