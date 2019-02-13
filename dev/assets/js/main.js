@@ -217,6 +217,33 @@ $(".ez-new__item").hover(function(){
 // Маска для телефона
 $(".mask").mask("+7 (999) 999 99 99");
 
+// popup
+$(".ez-item__al").click(function(){ //popup call-button
+    $(".ez-popup").show().css("display", "flex");
+    $("body").css("overflow", "hidden");
+})
+$(".ez-popup__close").click(function(){ //popup close-button
+    $("body").css("overflow", "auto");
+    $(".ez-popup").hide();
+})
+$(".ez-popup").click(function(){ //popup hide on body
+    $(this).hide();
+    $("body").css("overflow", "auto");
+})
+$(".ez-popup__wrapper").click(function(event){ //popup not hide on text
+    event.stopPropagation();
+})
+// popup-end
+
+// submenu
+$(".ez-submenu__button").click(function(event){ 
+    $(this).toggleClass("ez-submenu_active");
+    event.stopPropagation();
+})
+
+$("body").click(function(){
+    $(".ez-submenu__button").removeClass("ez-submenu_active");
+})
 
 // Select menu
 
@@ -310,29 +337,35 @@ $('select').each(function(){
     })
 
      // search
-     $(".icon-menu").click(function(event){
-        if($(this).hasClass("icon-menu")){
-        $(".mob_menu").css({"visibility":"visible"});
-        $(this).removeClass();
-        $(this).addClass("icon-cancel2");
-        }else{
-            $(this).removeClass();
-            $(this).addClass("icon-menu");
-            $(".mob_menu").css({ "visibility":"hidden"});
-        }
-        event.stopPropagation();
-    })
-    $(".mob_menu").click(function(event){
-        event.stopPropagation();
-    })
-    $("body").click(function(){
-        $(".mob_menu").css({"visibility":"hidden"});
-        $(".icon-cancel2").removeClass().addClass("icon-menu");
+    //  $(".icon-menu").click(function(event){
+    //     if($(this).hasClass("icon-menu")){
+    //     $(".mob_menu").css({"visibility":"visible"});
+    //     $(this).removeClass();
+    //     $(this).addClass("icon-cancel2");
+    //     }else{
+    //         $(this).removeClass();
+    //         $(this).addClass("icon-menu");
+    //         $(".mob_menu").css({ "visibility":"hidden"});
+    //     }
+    //     event.stopPropagation();
+    // })
+    // $(".mob_menu").click(function(event){
+    //     event.stopPropagation();
+    // })
+    // $("body").click(function(){
+    //     $(".mob_menu").css({"visibility":"hidden"});
+    //     $(".icon-cancel2").removeClass().addClass("icon-menu");
+    // })
+
+    $(".mobmenu_button").click(function(){
+        $(this).toggleClass("mobmenu_change");
+        $(".mobmenu").toggleClass("mobmenu_open");
+        $("body").toggleClass("mobmenu_forbody")
     })
         
     $(".input_numb").on("change paste keyup", function() {
-        if($(this).val() > 99){
-            $(this).addClass("ez-error")
+        if($(this).val().length > 2){
+            $(this).val() = substr($(this).val(),1,3);
         }else{
             $(this).removeClass("ez-error")
 
@@ -347,4 +380,11 @@ $('select').each(function(){
 
 
 
+    // Hover
+    $(".ez-help").hover(function(){
+        $(".ez-p").css("visibility", "visible");
+    })
+    $(".ez-help").mouseleave(function(){
+        $(".ez-p").css("visibility", "hidden");
+    })
 });

@@ -1,6 +1,20 @@
 @import 'settings';
 
+
 @media screen and (max-width: 1200px){
+  .ez-callback, .ez-popular{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ez-item__line{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    p{
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
    .section{
      &__wrapper{
        width: 100%;
@@ -137,14 +151,29 @@
   }
 
   @media screen and (max-width: 1000px){
+
     .ez-callback{
       &__title{
         font-size: 30px;
         line-height: 40px;
+
+        &:after{
+          top: 28px;
+        }
       }
     }
     .ez-board__item{
       height: 300px;
+
+      &:hover{
+        box-shadow: none;
+        transition: 0.3s all ease;
+        .ez-board__img{
+            transform: scale(1);
+            transition: 0.5s all ease;
+
+        }
+    }
 
       &_right{
         .ez-board__img {
@@ -219,10 +248,30 @@
     .ez-board__descr{
       font-size: 13px;
     }
-  }
-  
+    }
+    .ez-popup__wrapper{
+      padding: 20px 30px;
+    }
+    .ez-callback{
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
    @media screen and (max-width: 780px){
+    .ez-callback{
+      &__title{
+        &:after{
+          display: none;
+        }
+      }
+    }
+     .ez-header__right{
+       a{
+         &:nth-child(3){
+           margin-right: 20px;
+         }
+       }
+     }
     .ez-board__wrapper{
       flex-direction: column;
       align-items: center;
@@ -244,8 +293,19 @@
     .ez-board__item {
       width: 65%;
   }
-    .ez-header .icon-menu{
+    .ez-header .mobmenu_button{
       display: block;
+    }
+    .mobmenu{
+      .active{
+        font-weight: bold;
+      }
+      a{
+        color: $text;
+      }
+    }
+    .ez-header .mobmenu{
+      visibility: visible;
     }
     .ez-item{
       margin-top: 35px;
@@ -302,10 +362,11 @@
 
     .ez-callback{
       height: auto;
-      padding-top: 20px;
-      padding-bottom: 20px;
       &__wrapper{
         flex-direction: column;
+        padding-bottom: 20px;
+        padding-top: 20px;
+
       }
 
       &__subtitle{
@@ -328,8 +389,56 @@
         }
       }
     }
+    .ez-popup__inst{
+      font-size: 11px;
+    }
+    .ez-popup__text{
+      font-size: 12px;
+    }
+    .ez-popup__col span {
+      font-size: 12px;
+  }
    }
    @media screen and (max-width: 650px){
+     .ez-popup{
+       &__table{
+         flex-direction: column;
+         width: 100%;
+       }
+
+       &__col{
+         flex-direction: row;
+         width: 100%;
+
+         span{
+           width: 20%;
+           font-weight: normal;
+           padding-right: 5px;
+           
+
+           &:first-child{
+            border-bottom: none;
+            padding-top: 5px;
+           }
+           &:last-child{
+            border-bottom: none;
+            padding-top: 5px;
+            padding-right: 0;
+           }
+         }
+
+         &:first-child{
+           span{
+             font-weight: bold;
+             border-bottom: 1px solid #000;
+             word-break: break-all;
+           }
+         }
+       }
+     }
+    .ez-callback__title{
+      line-height: 1.1;
+    }
     .ez-slider__item {
       height: 549px;
     }
@@ -413,6 +522,20 @@ margin-left: 8px;
     
    }
    @media screen and (max-width: 600px){
+    .ez-popup{
+      padding: 15px;
+
+      &__wrapper{
+        padding: 20px 15px;
+      }
+
+      img{
+        width: 40%;
+      }
+    }
+    .ez-footer__about{
+      max-width: 300px;
+    }
     .ez-footer__col{
       &:nth-child(2){
         display: none;
@@ -447,6 +570,41 @@ margin-left: 8px;
    }
 
    @media screen and (max-width: 500px){
+    .ez-header .mobmenu{
+       width: 100%;
+     }
+    .ez-popup{
+      &__col{
+        span{
+          padding-top: 3px;
+          padding-bottom: 3px;
+          &:first-child{
+            padding-top: 3px;
+           }
+           &:last-child{
+            padding-top: 3px;
+           }
+        }
+      }
+
+      &__title{
+        font-size: 20px;
+        text-align: center;
+      }
+
+      img{
+        width: 70%;
+      }
+
+      &__close{
+        top: 10px;
+        right: 10px;
+      }
+
+      &__text{
+        font-size: 11px;
+      }
+    }
     .ez-slider__item {
       height: 408px;
   }
@@ -474,10 +632,7 @@ margin-left: 8px;
         margin-bottom: 20px;
       }
     }
-    .ez-header .mob_menu a {
-      font-size: 14px;
-      margin-right: 10px;
-    }
+    
     .ez-footer__body{
       flex-direction: column;
       margin-bottom: 10px;
@@ -649,7 +804,7 @@ margin-left: 8px;
       font-size: 17px;
   }
     .ez-new__img{
-      margin-bottom: -182px;
+      margin-bottom: -40px;
     }
     
     .ez-board__item_right{
@@ -785,7 +940,7 @@ margin-left: 8px;
       font-size: 13px;
   }
     .ez-new__img{
-      margin-bottom: -182px;
+      margin-bottom: 0px;
     }
     .ez-new__r{
       width: 100%;
@@ -809,5 +964,13 @@ margin-left: 8px;
     }
     .ez-board__item_left .ez-board__img {
       width: 150px;
+    }
+    .ez-callback__title{
+      line-height: 29px;
+    }
+    .ez-callback__subtitle{
+      text-align: center;
+      line-height: 1;
+      margin-top: 10px;
     }
   }

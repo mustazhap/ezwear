@@ -76,7 +76,7 @@ a{
     font-family: 'icomoon' !important;
     font-size: 8px;
     position: absolute;
-    top: 16px;
+    top: 20px;
     right: 10px;
   }
   &:hover {
@@ -127,7 +127,78 @@ a{
 // Footer :)
 @import "../../blocks/footer/footer";
 
+// global changings
+.woocommerce ul.products li.product figure .product-wrap .product-images .shop-loop-thumbnail.shop-loop-front-thumbnail{
+  margin-top: 30px !important;
+}
+.woocommerce span.onsale{
+  top: -56px !important;
+  right: auto;
+  left: 0;
+}
+.product-images{
+  .onsale{
+    color: transparent !important;
+    &:after{
+      content: "Акция!";
+      background: url(../img/new-br.svg) no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      width: 110px;
+      font-family: $OS;
+      height: 28px;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 12px;
+      padding-left: 15px;
+      line-height: 1;
+      font-weight: 700;
+    }
+  }
+}
+.form-flat-select select{
+  line-height: 1.2;
+}
 
+.woocommerce ul.products li.product figcaption .shop-loop-product-info .info-title {
+  padding-bottom: 10px;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  font-family: $OS;
+}
+
+.woocommerce ul.products li.product figcaption .shop-loop-product-info .info-title .product_title a{
+  font-family: $OS;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+input, button{
+  -webkit-appearance: none;
+}
+button{
+  border: none;
+}
+.add_to_wishlist{
+  &:hover{
+    text-decoration: none;
+  }
+}
+.woocommerce ul.products li.product .yith-wcwl-add-to-wishlist {
+  margin-right: -25px;
+  right: 50%;
+}
+.woocommerce ul.products li.product .yith-wcwl-add-to-wishlist .add_to_wishlist {
+  background: #2a292b;
+  border-radius: 50%;
+}
 
 // importing media queries
 @import "media";
+

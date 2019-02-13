@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2msd93');
-  src:  url('fonts/icomoon.eot?2msd93#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2msd93') format('truetype'),
-    url('fonts/icomoon.woff?2msd93') format('woff'),
-    url('fonts/icomoon.svg?2msd93#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?90klf4');
+  src:  url('fonts/icomoon.eot?90klf4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?90klf4') format('truetype'),
+    url('fonts/icomoon.woff?90klf4') format('woff'),
+    url('fonts/icomoon.svg?90klf4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cancel2:before {
+  content: "\e919";
+}
+.icon-prev:before {
+  content: "\e918";
+}
+.icon-next:before {
+  content: "\e905";
+}
 .icon-vk:before {
   content: "\e917";
 }
@@ -61,7 +70,7 @@
 .icon-menu:before {
   content: "\e90e";
 }
-.icon-cancel:before {
+.icon-cancel1:before {
   content: "\e90d";
 }
 .icon-heart:before {
@@ -75,15 +84,13 @@
 }
 .icon-Right_Arrow:before {
   content: "\e902";
+  color: #fff;
 }
 .icon-Arrow:before {
   content: "\e903";
 }
 .icon-Facebook:before {
   content: "\e904";
-}
-.icon-Twitter:before {
-  content: "\e905";
 }
 .icon-instagram:before {
   content: "\e906";

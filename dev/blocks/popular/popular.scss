@@ -1,10 +1,9 @@
 .ez-popular{
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
-    padding-bottom: 20px;
 
-    &_wrapper{
+    &__wrapper{
         display: flex;
         flex-direction: column;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
 
     }
     .owl-nav{
@@ -49,10 +48,9 @@
         }
 
         span{ 
-            transform: rotate(180deg);
-                padding-left: 6px;
+                padding-left: 3px;
             &:before{
-                content: "\e902";
+                content: "\e918";
                 color: white;
             }
         }
@@ -81,9 +79,9 @@
         }
 
         span{
-            padding-left: 6px;
+            padding-left: 9px;
             &:before{
-                content: "\e902";
+                content: "\e905";
                 color: white;
             }
         }
@@ -106,6 +104,7 @@
         span{
             font-size: 16px;
             font-weight: 700;
+            padding-left: 30px;
             line-height: 24px;
         }
     }
@@ -160,5 +159,29 @@
         line-height: 1;
         font-weight: 700;
         line-height: 24px;
+    }
+}
+
+.ez-popular__item{
+    &:after{
+        content: "";
+        display: block;
+        width: 1px;
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        margin-top: -73px;
+        height: 147px;
+        background-color: #ededed;
+    }
+}
+
+.owl-item{
+    &:last-child(){
+        .ez-popular__item{
+            &:after{
+                display: none !important;
+            }
+        }
     }
 }

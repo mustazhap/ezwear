@@ -1,13 +1,15 @@
 .ez-callback{
     height: 246px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    background-color: #202124;
-
+   
     &__wrapper{
         display: flex;
         justify-content: space-between;
         color: white;
         align-items: center;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        background-color: #202124;
+        padding-left: 70px;
+        padding-right: 70px;
     }
 
     &__left{
@@ -19,6 +21,19 @@
         font-size: 41px;
         font-weight: 700;
         line-height: 53px;
+        position: relative;
+        z-index: 9;
+
+        &:after{
+            content: "";
+            width: 286px;
+            position: absolute;
+            top: 36px;
+            left: 0;
+            z-index: -1;
+            height: 14px;
+            background-color: #2c6fe3;
+        }
     }
 
     &__subtitle{
@@ -37,7 +52,7 @@
         flex-direction: column;
         span{
             position: absolute;
-            top: 0;
+            top: 5px;
         }
     }
 
@@ -47,6 +62,7 @@
         span{
             font-size: 12px;
             font-weight: 700;
+            text-transform: uppercase;
             line-height: 14px;
         }
     }
