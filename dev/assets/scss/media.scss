@@ -400,6 +400,12 @@
   }
    }
    @media screen and (max-width: 650px){
+    .ez-popular__item:after{
+      display: none;
+    }
+    .ez-popular__top span{
+      padding-left: 0;
+    }
      .ez-popup{
        &__table{
          flex-direction: column;
@@ -570,6 +576,10 @@ margin-left: 8px;
    }
 
    @media screen and (max-width: 500px){
+     .ez-popular{
+       padding-left: 0;
+       padding-right: 0;
+     }
     .ez-header .mobmenu{
        width: 100%;
      }
@@ -673,7 +683,7 @@ margin-left: 8px;
       margin-top: 20px;
       width: 118px;
     height: 38px;
-    font-size: 17px;
+    font-size: 15px;
   }
     .ez-new__img{
       margin-bottom: -106px;

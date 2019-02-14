@@ -7,7 +7,7 @@ html, body{
   padding: 0;
   height: 100%;
   min-height: 100%;
-  font-family: $OS;
+  font-family: $OS !important;
   color: $text;
   box-sizing: border-box;
   position: relative;

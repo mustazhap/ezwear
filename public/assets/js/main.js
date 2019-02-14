@@ -236,8 +236,8 @@ $(".ez-popup__wrapper").click(function(event){ //popup not hide on text
 // popup-end
 
 // submenu
-$(".ez-submenu__button").click(function(event){ 
-    $(this).toggleClass("ez-submenu_active");
+$(".ez-submenu__button").find("b").click(function(event){ 
+    $(".ez-submenu__button").toggleClass("ez-submenu_active");
     event.stopPropagation();
 })
 
@@ -357,12 +357,30 @@ $('select').each(function(){
     //     $(".icon-cancel2").removeClass().addClass("icon-menu");
     // })
 
-    $(".mobmenu_button").click(function(){
+    $(".mobmenu_button").click(function(event){
         $(this).toggleClass("mobmenu_change");
         $(".mobmenu").toggleClass("mobmenu_open");
-        $("body").toggleClass("mobmenu_forbody")
+        $("body").toggleClass("mobmenu_forbody");
+        $(".ez-header__right").toggleClass("active_black");
+        if($(this).hasClass("mobmenu_change")){
+            console.log("open");
+            $(".ez-header__logo img").attr("src", "http://ezwear.almaty.gq/wp-content/themes/jakiro/assets/rustem/img/nlogo-1_white.svg")
+        }else{
+            if(w < 500){
+                $(".ez-header__logo img").attr("src", "http://ezwear.almaty.gq/wp-content/themes/jakiro/assets/rustem/img/nlogo-1.svg")            
+            }
+        }
+        event.stopPropagation();
     })
-        
+    $("body").click(function(){
+        $("body").removeClass("mobmenu_forbody");
+        $(".mobmenu_button").removeClass("mobmenu_change");
+        $(".mobmenu").removeClass("mobmenu_open");
+    })
+    $(".mobmenu").click(function(event){
+        event.stopPropagation();
+    })
+
     $(".input_numb").on("change paste keyup", function() {
         if($(this).val().length > 2){
             $(this).val() = substr($(this).val(),1,3);

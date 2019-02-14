@@ -72,31 +72,6 @@
         }
     }
 
-    &_black{
-        background-color: #2a292b;
-        .mob_menu{
-            a{
-            color: $text !important;
-
-            }
-        }
-        .ez-header__nav{
-            .active{
-                color: white;
-            }
-            a{
-                color: rgba(white, 0.8);
-
-            &:hover{
-                color: rgba(white, 0.6)
-            }
-        }
-        }
-
-        .ez-header__right a{
-            color: #6c6b6b;
-        }
-    }
 
     &__right{
         display: flex;
@@ -162,14 +137,11 @@
         top: 0;
         height: 100vh;
         width: 320px;
-        justify-content: flex-end;
         z-index: 88;
         padding-left: 25px;
-        
-        padding-top: 30px;
+        padding-top: 80px;
         padding-bottom: 30px;
         visibility: hidden;
-        justify-content: center;
         right: -100%;
         transition: 0.5s all ease;
 
@@ -229,6 +201,74 @@
         }
 
     }
+
+    &_black{
+        background-color: #2a292b;
+        .active_black{
+            a{
+                color: $text !important;
+            }
+            .mobmenu_button {
+                .bar1, .bar2, .bar3{
+                    background-color: $text !important;
+
+                }
+            }
+        }
+        .ez-submenu_active{
+            a{
+                color: rgba(255,255,255,.6) !important;
+            }
+        }
+        .mobmenu a{
+            color: $text !important;
+        }
+        .ez-submenu__body a{
+            color: #202124 !important;
+        }
+        .ez-submenu_active b {
+            color: white !important;
+        }
+        .mobmenu_button .bar1, .mobmenu_button .bar2, .mobmenu_button .bar3{
+            background-color: #6c6b6b !important;
+        }
+        .ez-header .mobmenu .active{
+            color: $text !important;
+        }
+        .ez-header .mobmenu a{
+            color: $text !important;
+        }
+        .ez-submenu__button{
+            &:hover{
+                a, b{
+                    color: rgba(white, 0.6)
+                }
+            }
+        }
+        .mob_menu{
+            a{
+            // color: $text !important;
+
+            }
+        }
+        .ez-header__nav{
+            .active{
+                color: white;
+            }
+            a{
+                color: rgba(white, 0.8);
+
+            &:hover{
+                color: rgba(white, 0.6)
+            }
+        }
+        }
+
+        .ez-header__right a{
+            color: #6c6b6b;
+        }
+    }
+
 }
 .mobmenu_forbody{
     overflow: hidden;
@@ -243,10 +283,15 @@
         margin-right: 45px;
         color: #d4d3d3;
         position: relative;
-
+        a{
+            margin-right: 0;
+        }
         &:hover{
             color: $text;
             text-decoration: none;
+            a{
+                color: $text;
+            }
         }
 
         b{
@@ -288,7 +333,7 @@
     }
 
     &_active{
-        span{
+        a{
             color: $text;
         }
         b{
